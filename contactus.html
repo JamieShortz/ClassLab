@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+	<title> Contact Violet Impact Designs</title>
+	<meta name ="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="contactus.css">
+	<!--	<script src="JS/jquery-3.5.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="main.js"></script>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+
+
+<header>
+	<img width= "200" src="images/violetimpact-designs-logo.jpg" alt="">
+	<h1 class ="violet">Contact Violet Impact Designs</h1>
+
+</header>
+
+
+<nav>
+
+<ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="designs.html">Designs</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="contactus.html">ContactUs</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="slideshows.html">Slideshows</a></li>
+        </ul>
+
+</nav>
+
+<main>
+	<h2 id="concerns">Email us your concerns and we'll respond as soon as possible!</h2>
+<form name = "Name" action="contactus.php" method="POST" class="submission-form">
+	<label for="firstName">First Name:</label>
+	<input name="firstName" id="firstName" type="text" placeholder="Megan" required="">
+	<label for="lastName">Last Name:</label>
+	<input name="lastName" id="lastName" type="text" placeholder="Fox" required="">
+	<label for="email">Email:</label>
+	<input id="email" type="email" name="Email" placeholder="youremail@email.com" required="">
+	<label for="phone">Phone:</label>
+	<input name="Phone" id="phone" minlength="10" maxlength="10" type="tel" placeholder="(555)555-5555" required="">
+	<p>What would you like to tell us?</p>
+	<textarea id ="comments" name="Comments" rows="10" cols="50" required=""></textarea>
+	<select name="Rating" id="rating">
+		<option value="happy">:)</option>
+		<option value="neutral">:\</option>
+		<option value="sad">:(</option>
+	</select>
+	<h2>Enter your four-digit passcode, then click OK:</h2>
+
+	<input id="id1" type="password" min="1000" max="9999" required="">
+	<button id="ok" onclick="myFunction()">OK</button>
+
+	<p id="passcode"></p>
+
+	<script>
+		function myFunction() {
+			var inpObj = document.getElementById("id1");
+			if (inpObj.checkValidity() == false) {
+				document.getElementById("passcode").innerHTML =
+				inpObj.validationMessage;
+			} else {
+				document.getElementById("passcode").innerHTML = "Passcode Valid";
+			}
+		}
+	</script>
+	
+	<input type="submit" name="Submit" id="submitbtn" value="Send">
+
+</form>
+
+
+</main>
+
+<script>
+function displayDate(){
+  var year = new Date().getFullYear();
+  var date = `&copy; VioletImpact ${year}. All Rights Reserved.`;
+  document.getElementById("foot").innerHTML = date;
+}
+</script>
+
+<footer> 
+	        <div>
+            <button id="copyright" type="button" onclick="displayDate()">Copyright</button>
+            <p id = "foot"></p>
+            <a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="history.html">History</a> | <a href="forum.html">Forum</a> | <a href="contactus.html">
+                ContactUs
+            </a> | <a href="designs.html">See our Catalog!</a> | <a href="slideshows.html">View our Slideshows!</a>
+        </div>
+		</footer>
+<script src="animatedtext.js"></script>
+</body>
+</html>
