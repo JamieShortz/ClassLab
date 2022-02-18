@@ -1,109 +1,96 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html lang>
-<head>
-	<title> Violet Impact Designs</title>
-  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" type="text/css" href="scrolleffect.css">
-<!--	<script src="JS/jquery-3.5.1.min.js"></script> -->
+    <head>
+	<title>ImpactFull Designs</title>
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <link rel="stylesheet" type="text/css" href="styles/scrolleffect.css">
+    <!--    <script src="JS/jquery-3.5.1.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="main.js"></script>
-  <script src="scrolleffectjs.js"></script>
-  <meta charset="UTF-8">
+    <script src="main.js"></script>
+    <script src="scrolleffectjs.js"></script>
+    <meta charset="UTF-8">
 </head>
-
 <body>
 
-  <div class="wrapper">
 
 <header>
-	<img alt ="Violet Impact Designs logo" width= "200" src="images/violetimpact-designs-logo.jpg">
-	<h1 class ="violet">Violet Impact Designs</h1>
+	<img width= "200" src="images/violetimpact-designs-logo.jpg" alt ="Violet Impact Designs logo">
+	<h1 class ="violet">ImpactFull Designs</h1>
 
 </header>
 
 <nav>
-
-<ul>
+	<ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="designs.html">Designs</a></li>
-            <li><a href="forum.html">Forum</a></li>
-            <li><a href="contactus.html">ContactUs</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="slideshows.html">Slideshows</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="trending.html">Trending</a></li>
+            <li><a href="support.html">Support</a></li>
         </ul>
 </nav>
 
-<main>
-
-
-
-    <div class="intro-block">
+<main> 
+    
+ <div class="intro-block">
       <p>Hello! Welcome to Violet Impact! Where we design your favorite posters, book covers, and logos! You request a design, we create them! Below are a list of possible ways we will your requested designs! A standard poster size is 24' x 36' px. A book cover may be of any portrait size but can typically be 5' x 8'. Logos can be of any legible size and will be noticeable wherever you apply them. No matter your choice we will not disappoint! If you're interested in learning more, check us out on our About Page! If you ran into problems you may contact us on our contact page!</p>
     </div>
 
     <div class="content-block">
       <div class="text-block">
-        <h2>Posters</h2>
-        <p>We have a list of posters to choose from.</p>
+        <h2>Supershot</h2>
+        <p>A poster of an armored space soldier from mars.</p>
       </div>
       <img class="img1" src="images/Supershot-thumbnail.png" alt="">
     </div>
   
   <div class="content-block2">
       <div class="text-block2">
-        <h2>Illustrations</h2>
-        <p>Our ideas don't stop here. We can hand draw you any illustration to your desire.</p>
+        <h2>Karambit tide flow</h2>
+        <p>A tide of sea overlapped by a special weapon called the "Karambit."</p>
       </div>
       <img class="img2" src="images/Tide-Flow.png" alt="The Tide">
     </div>
 
     <div class="content-block3">
       <div class="text-block3">
-        <h2>Post Cards</h2>
-        <p>Want to express how you feel? We have a list of worthwhile post cards for your spouse, friends, and even family members!</p>
+        <h2>Valentines day card</h2>
+        <p>Valentines day post card with a decorative background.</p>
       </div>
       <img class="img3" src="images/Valentines-day-greeting.jpg" alt="Valentines Day">
     </div>
 
     <div class="content-block4">
       <div class="text-block4">
-        <h2>Logos</h2>
-        <p>In need of a design that describes your bussiness? We have a list of logos for you to choose at your delight!</p>
+        <h2>Violet Impact Website logo</h2>
+        <p>A violet-colored design of the old website of Violet Impact.</p>
       </div>
       <img class="img4" src="images/Violetimpact-website-identity-logo.png" alt="Logo">
     </div>
-  
 
 </main>
+
 <script>
 function displayDate(){
   var year = new Date().getFullYear();
-  var date = `&copy; VioletImpact ${year}. All Rights Reserved.`;
+  var date = `&copy; Jamie Samuels ${year}. All Rights Reserved.`;
   document.getElementById("foot").innerHTML = date;
 }
 </script>
 
-
-
-<footer> 
-<!--
-
-		<p>Credits to my other site:</p> <a href="https://violetimpact.com/">Violet Impact</a>
--->
-
-        <div>
+<footer> <div>
             <button id="copyright" type="button" onclick="displayDate()">Copyright</button>
             <p id = "foot"></p>
-
-            <a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="history.html">History</a> | <a href="forum.html">Forum</a> | <a href="contactus.html">
-                ContactUs
-            </a> | <a href="designs.html">See our Catalog!</a> | <a href="slideshows.html">View our Slideshows!</a>
+            <a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="news.html">News</a> | <a href="trending.html">Trending</a> | <a href="support.html">
+                Support
+            </a>
         </div>
-		</footer>
-    <script src="animatedtext.js"></script>
-
-  </div>
-  </body>
+ </footer>
+ <script src="animatedtext.js"></script>
+</body>
 </html>
