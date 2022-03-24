@@ -28,15 +28,15 @@ public class loginServlet extends HttpServlet {
         else if (action.equals("add")) {
             // get parameters from the request
             String passWord = request.getParameter("passWord");
-            String email = request.getParameter("email");
+            String userName = request.getParameter("userName");
 
             // store data in User object
-            User user = new User(passWord, email);
+            User user = new User(passWord, userName);
 
             // validate the parameters
             String message;
-            if (passWord == null || email == null ||
-                passWord.isEmpty() || email.isEmpty()) {
+            if (passWord == null || userName == null ||
+                passWord.isEmpty() || userName.isEmpty()) {
                 message = "Please fill out all three text boxes.";
                 url = "/login.html";
             } 
