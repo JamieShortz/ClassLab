@@ -5,25 +5,25 @@ import java.io.Serializable;
 public class User implements Serializable {
 
 
-    private String email;
+    private String userName;
     private String passWord;
 
     public User() {       
-        email = "";
+        userName = "";
         passWord = "";
     }
 
-    public User(String passWord, String email) {        
-        this.email = email;
+    public User(String passWord, String userName) {        
+        this.userName = userName;
         this.passWord = passWord;
     }
 
-        public String getEmail() {
-        return email;
+        public String getUserName() {
+        return userName;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
     
     public String getPassWord() {
