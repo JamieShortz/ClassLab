@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/musicStore">
+    <Resource name="jdbc/musicDB" type="javax.sql.DataSource" auth="Container" 
+        driverClassName="com.mysql.jdbc.Driver" 
+        url="jdbc:mysql://localhost:3306/music?autoReconnect=true" 
+        username="root" password="password" 
+        maxActive="100" maxIdle="30" maxWait="10000" 
+        logAbandoned="true" removeAbandoned="true" 
+        removeAbandonedTimeout="60" type="javax.sql.DataSource" />
+    
+    <Resource name="jdbc/murachDB" type="javax.sql.DataSource" auth="Container" 
+        driverClassName="com.mysql.jdbc.Driver" 
+        url="jdbc:mysql://localhost:3306/murach?autoReconnect=true" 
+        username="root" password="password" 
+        maxActive="100" maxIdle="30" maxWait="10000" 
+        logAbandoned="true" removeAbandoned="true" 
+        removeAbandonedTimeout="60" type="javax.sql.DataSource" />
+    <Realm
+        dataSourceName="jdbc/murachDB" localDataSource="true"
+        className="org.apache.catalina.realm.DataSourceRealm"
+        userTable="UserPass" ruleNameCol="Rolename" userCredCol="password"
+        debug="99"
+        />  
+</Context>
