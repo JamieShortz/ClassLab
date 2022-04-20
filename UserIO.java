@@ -7,7 +7,7 @@ import murach.business.*;
 
 public class UserIO {
 
-    public static User getUser(String username, String filepath) {
+    public static User getUser(String userName, String filepath) {
         try {
             File file = new File(filepath);
             BufferedReader in = new BufferedReader(
@@ -17,12 +17,12 @@ public class UserIO {
             while (line != null) {
                 StringTokenizer t = new StringTokenizer(line, "|");
                 String supportUser = t.nextToken();
-                if (username.equalsIgnoreCase(supportUser)) {
-                    String password = t.nextToken();
-                    //String username = t.nextToken();
+                if (userName.equalsIgnoreCase(supportUser)) {
+                    String passWord = t.nextToken();
+                    //String userName = t.nextToken();
                     User s = new User();
-                    s.setPassWord(password);
-                    s.setUserName(username);
+                    s.setUserName(userName);
+                    s.setPassWord(passWord);                   
                     in.close();
                     return s;
                 }
@@ -46,11 +46,11 @@ public class UserIO {
             String line = in.readLine();
             while (line != null) {
                 StringTokenizer t = new StringTokenizer(line, "|");
-                String password = t.nextToken();
-                String username = t.nextToken();
+                String userName = t.nextToken();
+                String passWord = t.nextToken();
                 User s = new User();
-                s.setPassWord(password);
-                s.setUserName(username);
+                s.setUserName(userName);
+                s.setPassWord(passWord);
                 support.add(s);
                 line = in.readLine();
             }
